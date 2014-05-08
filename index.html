@@ -9,7 +9,7 @@
 
     <!-- Google Fonts -->
     <!-- TODO We're going to use the Google Font 'Bitter'. https://www.google.com/fonts#UsePlace:use/Collection:Bitter Link to it here -->
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Foundation CSS -->
     <!-- TODO link to foundation's normalize.css -->
@@ -60,9 +60,9 @@
             <!-- TODO for each of these 3 divs, add foundation columns so that they sit side by side at large screen sizes, and stack on top of each other at a small screen size -->
             <div class="location large-4 medium-4 small-4 columns">
                 <!-- TODO link to the hotel website and make the telephone a tel: link, and style this content -->
-                <p>at the Radisson Hotel</p>
-                <p>111 east cesar chavez</p>
-                <p>austin, texas 78701</p>
+                at the Radisson Hotel <br/>
+                111 east cesar chavez <br />
+                austin, texas 78701 <br/>
                 <a href="tel:512.478.2291">512.478.2291</a>
             </div>
 
@@ -97,12 +97,58 @@
 
         <!-- TODO add a foundation row -->
         <div class="row">
-            <div class="menu-section columns small-2">col</div>
-            <div class="menu-section columns small-2">col</div>
-            <div class="menu-section columns small-2">col</div>
-            <div class="menu-section columns small-2">col</div>
-            <div class="menu-section columns small-2">col</div>
-            <div class="menu-section columns small-2">col</div>
+            <!-- TODO write the following HTML for each of the menus: breakfast, lunch, dinner, dessert, cocktails, and wine. Give them a small-2 columns so they line up appropriately next to each other. One of them is active in the mockup. Which one? What kind of classname would you add to show that it is active? -->
+            <div class="menu-section breakfast small-12 medium-4 large-2 columns">
+                <h3>
+                    <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
+                        <a href="#breakfast">
+                            <!-- TODO name of menu section -->
+                            Breakfast
+                        </a>
+                </h3>
+            </div>
+            <div class="menu-section lunch small-12 medium-4 large-2 columns">
+                <h3>
+                    <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
+                        <a href="#lunch">
+                            <!-- TODO name of menu section -->
+                            Lunch
+                        </a>
+                </h3>
+            </div>
+            <div class="menu-section dinner small-12 medium-4 large-2 columns">
+                <h3>
+                    <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
+                        <a href="#dinner" class="is-active">
+                            <!-- TODO name of menu section -->
+                            Dinner
+                        </a>
+                </h3>
+            </div>
+            <div class="menu-section dessert small-12 medium-4 large-2 columns">
+                <h3>
+                <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
+                    <a href="#dessert">
+                        <!-- TODO name of menu section -->
+                        Dessert
+                    </a>
+                </h3>
+            </div>
+            <div class="menu-section cocktails small-12 medium-4 large-2 columns">
+                <h3>
+                <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
+                    <!-- TODO name of menu section -->
+                    <a href="#cocktails"> Cocktails</a>
+                </h3>
+            </div>
+            <div class="menu-section wine small-12 medium-4 large-2 columns">
+                <h3>
+                <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
+                    <!-- TODO name of menu section -->
+                    <a href="#wine"> Wine</a>
+                </h3>
+            </div>
+            </div>
         </div>
 
         <!-- TODO add a foundation row -->

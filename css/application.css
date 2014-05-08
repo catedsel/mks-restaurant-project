@@ -87,7 +87,7 @@ section {
 .location,
 .hours {
     /* TODO give these two divs some padding so that they line up with the map */
-    padding: 130px 0px 0px 0px;
+    padding-top: 100px
 }
 
 .hours-label { /* TODO style these with the appropriate font styles (bold/italic) */
@@ -107,7 +107,7 @@ section {
     /* TODO give this section a color of #221c12 and a background of #fffdf0. give it some bottom padding so there's space below the text. */
     color: #221c12;
     background-color: #fffdf0;
-    padding-bottom: 7px;
+    padding-bottom: 50px;
 }
 
 .menu h2 {
@@ -144,23 +144,42 @@ h2, .menu-section {
 /* TODO on the menu section links, when hovered, make them the same color but 100% opacity instead of 75% (.75) and make the bottom border the same color. */
 
 /* TODO on the ACTIVE menu section links, make them look the same as hovered ones. How do you know if they are active? */
-
+.menu-section.dinner a.is-active {
+    opacity: .75;
+    border-bottom: none;
+}
 
 .menu-section-content {
     /* TODO give this some space below the menu links */
+    padding-top: 30px;
 }
 
 
 .menu-item {
     /* TODO give each menu item some bottom margin */
+    margin-bottom: 10px;
 }
 
 /* TODO style the menu-item-name to be bold */
+.menu-item-name {
+    font-weight: bold;
+    clear: left;
+}
 
 /* TODO style the menu-item-description to be italic and be in one line with the price. You don't need to use Foundation classes to do this, but if you want to try and see, go for it! */
+.menu-item-description {
+    font-style: italic;
+    float: left;
+}
 
 /* TODO style the menu-item-price to be bold, 50% opacity, in line with the description but have some space to the left of it. */
+.menu-item-price {
+    font-weight: bold;
+    opacity: .50;
+    float: left;
+    margin-left: 20px;
 
+}
 
 /* ---------------------------------------------- */
 /* Social Media/Contact ------------------------- */
@@ -168,7 +187,24 @@ h2, .menu-section {
 
 .contact {
     /* TODO add the dark brown background color, and the background image symbols-bottom. Change the background-position so that the bottom of it shows (where the symbols start to fade out). */
+    background: #221c12 url(../images/symbols-bottom.png) no-repeat 0 0 ;
+
     /* TODO add some top and bottom padding so that the content doesn't overlap the background image. Note how the padding changes the location of the background image. */
+    padding-top: 500px;
 }
 
 /* TODO make the .social-links links be displayed in a row with some space between them. make them 50% opacity, and fade to 100% opacity when you hover over them. */
+.social-links {
+    opacity: .5;
+}
+
+.social-links a {
+    margin-left: 7px;
+}
+
+.social-links:hover {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
