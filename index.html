@@ -38,18 +38,19 @@
             <h4>the new restaurant by shawn cirkiel</br>poolside at the radisson</h4>
         </div>
 
-        <img src="images/chavez-1.jpg" alt="">
-        <!-- TODO there are ten images in the images folder. write image tags for each of them. then wrap the images in a #slides div so that Slides JS knows how to find them -->
-        <img src="images/chavez-2.jpg" alt="" />
-        <img src="images/chavez-3.jpg" alt="" />
-        <img src="images/chavez-4.jpg" alt="" />
-        <img src="images/chavez-5.jpg" alt="" />
-        <img src="images/chavez-6.jpg" alt="" />
-        <img src="images/chavez-7.jpg" alt="" />
-        <img src="images/chavez-8.jpg" alt="" />
-        <img src="images/chavez-9.jpg" alt="" />
-        <img src="images/chavez-10.jpg" alt="" />
-
+        <div id="slides">
+            <img src="images/chavez-1.jpg" alt="">
+            <!-- TODO there are ten images in the images folder. write image tags for each of them. then wrap the images in a #slides div so that Slides JS knows how to find them -->
+            <img src="images/chavez-2.jpg" alt="" />
+            <img src="images/chavez-3.jpg" alt="" />
+            <img src="images/chavez-4.jpg" alt="" />
+            <img src="images/chavez-5.jpg" alt="" />
+            <img src="images/chavez-6.jpg" alt="" />
+            <img src="images/chavez-7.jpg" alt="" />
+            <img src="images/chavez-8.jpg" alt="" />
+            <img src="images/chavez-9.jpg" alt="" />
+            <img src="images/chavez-10.jpg" alt="" />
+        </div><!--close slides-->
     </header>
 
     <!-- Address, map, hours -->
@@ -58,7 +59,7 @@
         <!-- TODO add a foundation row wrapping this content. do you know why you would add it here as a div, instead of as a class on the section.address? -->
         <div class="row">
             <!-- TODO for each of these 3 divs, add foundation columns so that they sit side by side at large screen sizes, and stack on top of each other at a small screen size -->
-            <div class="location large-4 medium-4 small-4 columns">
+            <div class="location small-12 medium-4 large-12">
                 <!-- TODO link to the hotel website and make the telephone a tel: link, and style this content -->
                 at the Radisson Hotel <br/>
                 111 east cesar chavez <br />
@@ -66,11 +67,11 @@
                 <a href="tel:512.478.2291">512.478.2291</a>
             </div>
 
-            <div class="map large-4 medium-4 small-4 columns">
+            <div class="map small-12 medium-4 large-12 columns">
                 <a href="https://goo.gl/maps/Y30G6"><img src="images/map-small.png" alt="Location Map" /></a>
             </div>
 
-            <div class="hours large-4 medium-4 small-4 columns">
+            <div class="hours small-12 medium-4 large-12 columns">
                 <!-- TODO style this content. use the classes .hours-label and .hours-value to determine which part is which and style it -->
                 <span class="hours-label">breakfast:</span>
                 <span class="hours-value">6:30–11am</span>
@@ -263,19 +264,19 @@
         <!-- TODO add a foundation row wrapping this content. do you know why you would add it here as a div, instead of as a class on the section.address? -->
 
         <!-- TODO for each of these 3 divs, add foundation columns so that they sit side by side. make them stack at small screen sizes. -->
-        <div class="email small-4 columns">
+        <div class="email small-12 medium-4 large-12 columns">
             <h5>Email</h5>
             <!-- TODO make this an email link -->
             <a href="mailto:info@chavez-austin.com">info@chavez-austin.com</a>
         </div>
 
-        <div class="social small-4 columns">
+        <div class="social small-12 medium-4 large-12 columns">
             <h5>Social Media</h5>
             <!-- TODO write a div.social-links. -->
             <div class="social-links">
             <!-- TODO inside that div, write a link that links to the social media links, and use the social media images in the image folder. -->
             <!-- TODO Facebook http://facebook.com/ChavezATX -->
-            <a href="http://facebook.com/ChavezATX"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="http://facebook.com/ChavezATX"><img src="images/facebook.png" alt="Facebook" id="facebook"/></a>
             <!-- TODO Twitter http://twitter.com/ChavezATX -->
             <a href="http://twitter.com/ChavezATX"><img src="images/twitter.png" alt="Twitter" /></a>
             <!-- TODO Instagram http://instagram.com/ChavezATX -->
@@ -283,7 +284,7 @@
             </div><!--close social-links-->
         </div>
 
-        <div class="press columns small-4 columns">
+        <div class="press columns small-12 medium-4 large-12 columns">
             <h5>Press Inquiries</h5>
             <!-- TODO make this an email link -->
             <a href="mailto:press@chavezrestaurant.com">press@chavezrestaurant.com</a>
@@ -300,15 +301,36 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
     <!-- Foundation JS -->
-    <script src="/js/foundation.min.js"></script>
+    <script src="js/foundation.min.js"></script>
     <script>
     $(document).foundation();
     </script>
 
     <!-- Slides.js -->
     <!-- TODO link to the slides.min.js file -->
+    <script src="js/slides js/source/jquery.slides.min.js"></script>
     <!-- TODO write the .slidesjs() code to make the slideshow work -->
-
+    <script>
+        $(function() {
+            $("#slides").slidesjs({
+                width: 700,
+                height: 393,
+            pagination: {
+                active: false,
+                effect: "fade"
+            },
+            play: {
+                effect: "fade",
+                interval: 7000,
+                auto: true
+            },
+            navigation: {
+                active: true,
+                effect: "fade"
+            }
+            });
+        });
+    </script>
 
 </body>
 

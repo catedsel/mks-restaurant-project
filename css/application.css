@@ -22,7 +22,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Header --------------------------------------- */
 /* ---------------------------------------------- */
 
-header {}
+header {
+
+}
 
 header h1 {
     /* TODO make the font size larger than Foundation's default; I uesd 4.5em */
@@ -33,7 +35,8 @@ header h1 {
 
 header .tagline h4  {
     /* TODO make the tagline italic; you'll have to work hard to override Foundation's font-style: normal on all headers! */
-    font-style: italic ;
+    font-style: italic;
+    font-weight: 400;
     /* TODO add the same text-shadow */
     text-shadow: 1px 1px 1px rgba(34, 28, 18,.75);
 }
@@ -47,8 +50,9 @@ header .tagline {
     /* TODO absolutely position the tagline bar at top: 35%. add a width so that it goes all the way across. */
     position: absolute;
     top: 35%;
+    width: 100%;
     /* TODO when you make the slideshow work, the tagline will get hidden. why? what line of CSS do you have to write to make it appear ABOVE the slideshow? */
-    /*z-index:?;*/
+    z-index: 1000;
 }
 
 
@@ -128,7 +132,6 @@ h2, .menu-section {
 .menu-section h3 a {
     /* TODO make menu section links a semi-transparent color rgba(34, 28, 18, .75). give them a 3px bottom border and give it a bit of space */
     color: rgba(34, 28, 18, .75);
-    border-bottom: 3px solid;
     padding: 2px;
     opacity: 0.75;
 }
@@ -145,8 +148,8 @@ h2, .menu-section {
 
 /* TODO on the ACTIVE menu section links, make them look the same as hovered ones. How do you know if they are active? */
 .menu-section.dinner a.is-active {
-    opacity: .75;
-    border-bottom: none;
+    opacity: 1;
+    border-bottom: 3px solid;
 }
 
 .menu-section-content {
@@ -177,7 +180,8 @@ h2, .menu-section {
     font-weight: bold;
     opacity: .50;
     float: left;
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-top: 1px;
 
 }
 
@@ -187,10 +191,11 @@ h2, .menu-section {
 
 .contact {
     /* TODO add the dark brown background color, and the background image symbols-bottom. Change the background-position so that the bottom of it shows (where the symbols start to fade out). */
-    background: #221c12 url(../images/symbols-bottom.png) no-repeat 0 0 ;
+    background: #221c12 url(../images/symbols-bottom.png) no-repeat 0 -160%;
 
     /* TODO add some top and bottom padding so that the content doesn't overlap the background image. Note how the padding changes the location of the background image. */
-    padding-top: 500px;
+    padding-top: 300px;
+   padding-bottom: 12em;
 }
 
 /* TODO make the .social-links links be displayed in a row with some space between them. make them 50% opacity, and fade to 100% opacity when you hover over them. */
@@ -199,7 +204,11 @@ h2, .menu-section {
 }
 
 .social-links a {
-    margin-left: 7px;
+    margin-left: 20px;
+}
+
+#facebook {
+    margin-left: -20px;
 }
 
 .social-links:hover {
@@ -208,3 +217,4 @@ h2, .menu-section {
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
+
