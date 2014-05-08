@@ -4,16 +4,18 @@
 
 body {
     margin: 0;
-    /* TODO use the Google Font 'Bitter' */
+    font-family: 'Bitter', serif;
     font-size: 100%;
 }
 
 div, h1, h2, h3, h4, h5, h6, p, ul, ol, a {
     /* TODO because we are using Foundation, we have to override Foundation's default font family. Use the Google Font 'Bitter' here. */
+    font-family: 'Bitter', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     /* TODO make the font color of all our headers #fffdf0 */
+    color: #fffdf0 ;
 }
 
 /* ---------------------------------------------- */
@@ -24,20 +26,29 @@ header {}
 
 header h1 {
     /* TODO make the font size larger than Foundation's default; I uesd 4.5em */
+    font-size: 4.5em;
     /* TODO add a text-shadow on the h1 using rgba(34, 28, 18,.75) */
+    text-shadow: 1px 1px 1px rgba(34, 28, 18,.75);
 }
 
-header .tagline h4 {
+header .tagline h4  {
     /* TODO make the tagline italic; you'll have to work hard to override Foundation's font-style: normal on all headers! */
+    font-style: italic ;
     /* TODO add the same text-shadow */
+    text-shadow: 1px 1px 1px rgba(34, 28, 18,.75);
 }
 
 header .tagline {
     /* TODO center the text */
+    text-align: center;
     background: rgba(34, 28, 18,.5); /* I added this transparent background bar for you. */
     /* TODO add some padding to give it space around the text */
+    padding: 5px;
     /* TODO absolutely position the tagline bar at top: 35%. add a width so that it goes all the way across. */
+    position: absolute;
+    top: 35%;
     /* TODO when you make the slideshow work, the tagline will get hidden. why? what line of CSS do you have to write to make it appear ABOVE the slideshow? */
+    /*z-index:?;*/
 }
 
 
@@ -60,15 +71,31 @@ section {
 
 .address {
     /* TODO give this section a background of #221c12 and a color of #fffdf0. make the text centered */
+    text-align: center;
+    background: #221c12;
+    color: #fffdf0;
+}
+
+.address:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
 }
 
 .location,
 .hours {
     /* TODO give these two divs some padding so that they line up with the map */
+    padding: 130px 0px 0px 0px;
 }
 
-.hours-label { /* TODO style these with the appropriate font styles (bold/italic) */ }
-.hours-value { /* TODO style these with the appropriate font styles (bold/italic) */ }
+.hours-label { /* TODO style these with the appropriate font styles (bold/italic) */
+    font-weight: bold;
+ }
+.hours-value { /* TODO style these with the appropriate font styles (bold/italic) */ 
+    font-style: italic;
+}
 
 
 
@@ -78,28 +105,46 @@ section {
 
 .menu {
     /* TODO give this section a color of #221c12 and a background of #fffdf0. give it some bottom padding so there's space below the text. */
+    color: #221c12;
+    background-color: #fffdf0;
+    padding-bottom: 7px;
 }
 
 .menu h2 {
     /* TODO make this font size larger than the Foundation default */
+    font-size: 3em;
 }
 
 .menu h2, .menu h3, .menu h4 {
     /* TODO give these headers a color of #221c12 */
+    color: #221c12;
 }
 
-
 /* TODO center the text of the h2 and menu-section */
+h2, .menu-section {
+    /*text-align: center;*/
+}
 
 .menu-section h3 a {
     /* TODO make menu section links a semi-transparent color rgba(34, 28, 18, .75). give them a 3px bottom border and give it a bit of space */
+    color: rgba(34, 28, 18, .75);
+    border-bottom: 3px solid;
+    padding: 2px;
+    opacity: 0.75;
+}
     /* TODO give the menu section links a CSS transition so that when you hover them, the color fades in slowly */
+.menu-section a:hover {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
 
 
 /* TODO on the menu section links, when hovered, make them the same color but 100% opacity instead of 75% (.75) and make the bottom border the same color. */
 
 /* TODO on the ACTIVE menu section links, make them look the same as hovered ones. How do you know if they are active? */
+
 
 .menu-section-content {
     /* TODO give this some space below the menu links */
